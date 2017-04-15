@@ -1,32 +1,39 @@
+# Site settings
+title: J U L I A
+description: 'lihatlah keluarlah, maka gunung akan mengajarimu'
+url: 'http://djolie.github.io'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
 
+author:
+  name: 'Josh Gerdes'
+  email: josh@joshgerdes.com
+  twitter_username: joshgerdes
+  facebook_username: joshgerdes
+  github_username:  joshgerdes
+  linkedin_username:  joshgerdes
 
-# Site Settings
-title: 						"lorosukmo"
-email: 						"lorosukmo@live.com"
-description: 				"dari Catatan sampai Curhatan"
-baseurl: 					""
-url: 						"http://lorosukmo.github.io"
-logourl: 					"https://avatars3.githubusercontent.com/u/4507180?v=3&s=460"		
-fa-logo: 					"fa-code"
-paginate: 					5
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
 
-# Author Settings
-author_name: 				"Sukmo Wijoyo"
-author_url: 				"http://lorosukmo.github.io"
-author_bio: 				"Kuli ketik yang masih berstrata 'noob', penikmat kopi dan pecinta keindahan (m)alam."
-author_email: 				"lorosukmo@live.com"
-author_image: 				"https://avatars3.githubusercontent.com/u/4507180?v=3&s=460"
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
 
-
-# SASS Settings
-# DO NOT MODIFY
-sass:
- sass_dir: "assets/css/"
- style: :compressed
-
-
-# Build Settings
-markdown: 					kramdown
-permalink: 					pretty
-
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
